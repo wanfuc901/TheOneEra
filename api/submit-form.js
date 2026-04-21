@@ -40,10 +40,14 @@ export default async function handler(req, res) {
     // ── Google Sheets ─────────────────────────────────────
     if (SHEETS_URL && SHEETS_URL.includes("script.google.com")) {
       try {
+        const sheetsBody = JSON.stringify(leadData);
         const r = await fetch(SHEETS_URL, {
           method:  "POST",
-          headers: { "Content-Type": "application/json" },
-          body:    JSON.stringify(leadData),
+          headers: {
+            "Content-Type":   "application/json",
+            "Content-Length": Buffer.byteLength(sheetsBody).toString(),
+          },
+          body: sheetsBody,
         });
         const j = await r.json().catch(() => ({}));
         results.sheets = j.result === "success" ? "ok" : "error";
