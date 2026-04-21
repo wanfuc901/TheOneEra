@@ -1,0 +1,242 @@
+/* ============================================
+   ONE ERA - Animations & Keyframes
+   ============================================ */
+
+/* Aurora Float Animation */
+@keyframes auroraFloat {
+  0% { 
+    transform: translateY(0) scale(1); 
+    opacity: .7; 
+  }
+  100% { 
+    transform: translateY(-30px) scale(1.08); 
+    opacity: 1; 
+  }
+}
+
+/* Scroll Pulse Animation */
+@keyframes scrollPulse {
+  0%, 100% { 
+    opacity: .5; 
+    transform: scaleY(1); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scaleY(1.1); 
+  }
+}
+
+/* Hover Transitions */
+.hero-img,
+.brand-img-grid img,
+.lifestyle-item img,
+.product-img-wrap img,
+.location-img-wrap img {
+  transition: transform var(--transition-slow);
+}
+
+.btn-primary,
+.btn-ghost,
+.nav-cta,
+.float-btn {
+  transition: all var(--transition-normal);
+}
+
+nav a,
+.footer-links a,
+.footer-bottom-links a {
+  transition: color var(--transition-fast);
+}
+
+nav a::after,
+.tab-btn::after,
+.dev-card::before {
+  transition: transform var(--transition-normal);
+}
+
+/* Reveal Animations */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-up.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Location Point Animation */
+.location-point {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.location-point.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Location Visual Animation */
+.location-visual {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.location-visual.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Developer Card Animation */
+.dev-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease, background var(--transition-normal);
+}
+
+.dev-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Benefit Item Animation */
+.benefit-item {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.benefit-item.revealed {
+  opacity: 1;
+}
+
+/* Popup Animation */
+.popup {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#popup-overlay.show .popup {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* Loader Progress Animation */
+.loader-progress-fill {
+  transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Image Hover Effects */
+.brand-img-grid img:hover,
+.product-img-wrap img:hover {
+  transform: scale(1.03);
+}
+
+.lifestyle-item:hover img {
+  transform: scale(1.07);
+}
+
+.location-img-wrap:hover img {
+  filter: grayscale(0%);
+}
+
+/* Card Hover Effects */
+.dev-card:hover {
+  background: rgba(201,160,220,0.05);
+}
+
+.dev-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Button Hover Effects */
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201,160,220,0.4);
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.float-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Link Hover Effects */
+nav a:hover {
+  color: var(--white);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--navy) !important;
+}
+
+.footer-links a:hover,
+.footer-bottom-links a:hover {
+  color: var(--gold);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  color: var(--gold);
+}
+
+/* Popup Close Hover */
+.popup-close:hover {
+  background: rgba(255,255,255,0.28);
+  transform: rotate(90deg);
+}
+
+/* Tab Button Hover & Active */
+.tab-btn:hover {
+  color: var(--navy);
+}
+
+.tab-btn.active {
+  color: var(--navy);
+}
+
+.tab-btn.active::after {
+  transform: scaleX(1);
+}
+
+/* Lifestyle Caption Fade */
+.lifestyle-caption {
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.lifestyle-item:hover .lifestyle-caption {
+  opacity: 1;
+}
+
+/* Float Label Fade */
+.float-label {
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.float-btn:hover .float-label {
+  opacity: 1;
+}

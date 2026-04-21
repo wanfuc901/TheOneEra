@@ -1,0 +1,366 @@
+/* ══════════════════════════════════════════════════════════
+   ONE ERA — Inline Utilities & Layout CSS
+   ══════════════════════════════════════════════════════════ */
+
+/* ── TOPBAR UTILITIES ── */
+.topbar-flex {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* ── MOBILE NAV ── */
+.mobile-nav-link {
+  display: block;
+  padding: 12px 0;
+  font-size: 14px;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-nav-link:hover {
+  color: var(--gold);
+}
+
+.mobile-nav-link.gold-text {
+  color: var(--gold);
+}
+
+/* ── CONSTRUCTION SECTION ── */
+.construction-section {
+  padding: 96px 0;
+  background: var(--navy);
+}
+
+.construction-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.construction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.lifestyle-item {
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+}
+
+.lifestyle-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lifestyle-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(26, 21, 53, 0.8);
+  color: var(--white);
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lifestyle-item:hover .lifestyle-caption {
+  opacity: 1;
+}
+
+.construction-year-box {
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+  background: var(--navy-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.construction-year {
+  font-family: var(--ff-display);
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--gold);
+}
+
+.construction-year-label {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+/* ── EVENTS SECTION ── */
+.events-section {
+  padding: 96px 0;
+  background: var(--cream);
+}
+
+.events-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.events-poster {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.events-poster img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.events-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.events-grid-2 img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.events-grid-2 img:nth-child(2) {
+  display: block;
+  max-height: 420px;
+  object-position: center top;
+}
+
+.events-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.events-grid-3 img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* ── RENDERS SECTION ── */
+.renders-section {
+  padding: 96px 0;
+  background: var(--navy-mid);
+}
+
+.renders-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.renders-grid-2-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.renders-grid-2-1 img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.renders-grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.renders-grid-4 img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.renders-grid-2-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.renders-grid-2-bottom img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.renders-grid-2-bottom img:nth-child(2) {
+  object-position: center 30%;
+}
+
+/* ── LOCATION SECTION ── */
+.location-img-wrap {
+  position: relative;
+}
+
+.location-img-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.location-badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: var(--white);
+  padding: 12px 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(26, 21, 53, 0.15);
+}
+
+.lb-num {
+  font-family: var(--ff-display);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--navy);
+}
+
+.lb-text {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* ── SECTION LABELS ── */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label-centered {
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.section-label-line {
+  flex: 0 0 40px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+.section-label-text {
+  font-family: var(--ff-body);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+/* ── BRAND SECTION ── */
+.brand-stat-group {
+  display: flex;
+  gap: 40px;
+  margin-top: 8px;
+}
+
+.brand-stat {
+  flex: 1;
+}
+
+.brand-stat-value {
+  font-family: var(--ff-display);
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--navy);
+  margin-bottom: 0;
+}
+
+.brand-stat-value-unit {
+  font-size: 16px;
+  color: var(--gold);
+  font-family: var(--ff-body);
+  font-weight: 300;
+  margin-left: 4px;
+}
+
+.brand-stat-label {
+  font-family: var(--ff-body);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ── RESPONSIVE ADJUSTMENTS ── */
+@media (max-width: 768px) {
+  .topbar-flex {
+    gap: 16px;
+  }
+
+  .construction-grid,
+  .events-grid-3,
+  .renders-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .events-grid-2,
+  .renders-grid-2-1,
+  .renders-grid-2-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .renders-grid-2-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .construction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-stat-group {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .construction-grid,
+  .events-grid-3,
+  .renders-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-stat-value {
+    font-size: 28px;
+  }
+
+  .brand-stat-value-unit {
+    font-size: 12px;
+  }
+}
