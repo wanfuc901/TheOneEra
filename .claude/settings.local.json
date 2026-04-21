@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Remove-Item \"d:/STUDIES/XAMPP/XAMPP/htdocs/OE/admin.php\" -Force)",
+      "Bash(Remove-Item \"d:/STUDIES/XAMPP/XAMPP/htdocs/OE/index.html.bak\" -Force)",
+      "Bash(Write-Host \"Deleted admin.php and index.html.bak\")"
+    ]
+  }
+}

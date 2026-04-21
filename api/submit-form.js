@@ -92,7 +92,7 @@ export default async function handler(req, res) {
       ok: success,
       message: success
         ? "Đăng ký thành công! Chúng tôi sẽ liên hệ trong 30 phút."
-        : "Có lỗi xảy ra, vui lòng gọi hotline 0559239553.",
+        : "Có lỗi xảy ra, vui lòng gọi hotline 0865149461.",
       results,
     });
 
@@ -102,7 +102,21 @@ export default async function handler(req, res) {
   }
 }
 
+function escHtml(str) {
+  return String(str || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function buildEmailHtml(d) {
+  const name      = escHtml(d.name);
+  const phone     = escHtml(d.phone);
+  const email     = escHtml(d.email || "(không có)");
+  const source    = escHtml(d.source);
+  const timestamp = escHtml(d.timestamp);
   return `<!DOCTYPE html>
 <html lang="vi"><head><meta charset="UTF-8"/></head>
 <body style="margin:0;padding:0;background:#f4f1eb;font-family:Arial,sans-serif;">
@@ -127,25 +141,25 @@ function buildEmailHtml(d) {
       </td></tr>
       <tr>
         <td style="padding:11px 16px;color:#888;font-size:13px;width:130px;border-bottom:1px solid #f0f0f0;">Họ tên</td>
-        <td style="padding:11px 16px;color:#1a1a1a;font-size:13px;font-weight:700;border-bottom:1px solid #f0f0f0;">${d.name}</td>
+        <td style="padding:11px 16px;color:#1a1a1a;font-size:13px;font-weight:700;border-bottom:1px solid #f0f0f0;">${name}</td>
       </tr>
       <tr>
         <td style="padding:11px 16px;color:#888;font-size:13px;border-bottom:1px solid #f0f0f0;">Điện thoại</td>
-        <td style="padding:11px 16px;color:#b8975a;font-size:15px;font-weight:700;border-bottom:1px solid #f0f0f0;">${d.phone}</td>
+        <td style="padding:11px 16px;color:#b8975a;font-size:15px;font-weight:700;border-bottom:1px solid #f0f0f0;">${phone}</td>
       </tr>
       <tr>
         <td style="padding:11px 16px;color:#888;font-size:13px;border-bottom:1px solid #f0f0f0;">Email</td>
-        <td style="padding:11px 16px;color:#1a1a1a;font-size:13px;border-bottom:1px solid #f0f0f0;">${d.email || "(không có)"}</td>
+        <td style="padding:11px 16px;color:#1a1a1a;font-size:13px;border-bottom:1px solid #f0f0f0;">${email}</td>
       </tr>
       <tr>
         <td style="padding:11px 16px;color:#888;font-size:13px;border-bottom:1px solid #f0f0f0;">Nguồn</td>
         <td style="padding:11px 16px;border-bottom:1px solid #f0f0f0;">
-          <span style="background:#e8f0fb;color:#1a5fa8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:3px;">${d.source}</span>
+          <span style="background:#e8f0fb;color:#1a5fa8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:3px;">${source}</span>
         </td>
       </tr>
       <tr>
         <td style="padding:11px 16px;color:#888;font-size:13px;">Thời gian</td>
-        <td style="padding:11px 16px;color:#aaa;font-size:12px;">${d.timestamp}</td>
+        <td style="padding:11px 16px;color:#aaa;font-size:12px;">${timestamp}</td>
       </tr>
     </table>
     <table width="100%" cellpadding="0" cellspacing="0" style="background:#faf8f4;border-left:3px solid #b8975a;margin-bottom:24px;">
@@ -161,7 +175,7 @@ function buildEmailHtml(d) {
   </td></tr>
   <tr><td style="background:#f9f9f7;border-top:1px solid #eaeaea;padding:14px 28px;">
     <table width="100%" cellpadding="0" cellspacing="0"><tr>
-      <td style="font-size:11px;color:#aaa;">© 2025 ONE ERA by Kinera</td>
+      <td style="font-size:11px;color:#aaa;">© 2026 ONE ERA by Kinera</td>
       <td align="right" style="font-size:11px;color:#aaa;">Hệ thống tự động</td>
     </tr></table>
   </td></tr>

@@ -169,35 +169,56 @@ window.addEventListener('scroll', () => {
 });
 
 // ── POPUP FUNCTIONS ──
-function closePopup() {
-  document.getElementById('popup-overlay').classList.remove('show');
+const popupOverlay = document.getElementById('popup-overlay');
+
+function openPopup() {
+  popupOverlay.classList.add('show');
 }
 
-// Auto-show popup after 8 seconds
-setTimeout(() => {
-  document.getElementById('popup-overlay').classList.add('show');
-}, 8000);
+function closePopup() {
+  popupOverlay.classList.remove('show');
+}
 
-function handlePopupClick(e) {
-  if (e.target === document.getElementById('popup-overlay')) {
-    closePopup();
-  }
+// Close on overlay backdrop click
+popupOverlay.addEventListener('click', (e) => {
+  if (e.target === popupOverlay) closePopup();
+});
+
+// Close on X button
+document.querySelectorAll('.js-close-popup').forEach(el => {
+  el.addEventListener('click', closePopup);
+});
+
+// Open on trigger buttons
+document.querySelectorAll('.js-open-popup').forEach(el => {
+  el.addEventListener('click', openPopup);
+});
+
+// Auto-show popup after 8 seconds — only once per session
+if (!sessionStorage.getItem('oe_popup_shown')) {
+  setTimeout(() => {
+    openPopup();
+    sessionStorage.setItem('oe_popup_shown', '1');
+  }, 8000);
 }
 
 // Block scroll on body when popup open
 const popupObs = new MutationObserver(() => {
-  const isOpen = document.getElementById('popup-overlay').classList.contains('show');
+  const isOpen = popupOverlay.classList.contains('show');
   document.body.style.overflow = isOpen ? 'hidden' : '';
 });
-popupObs.observe(document.getElementById('popup-overlay'), { attributes: true, attributeFilter: ['class'] });
+popupObs.observe(popupOverlay, { attributes: true, attributeFilter: ['class'] });
 
 // ── PRODUCT TABS ──
-function switchTab(id, btn) {
-  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  btn.classList.add('active');
-}
+document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.dataset.tab;
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  });
+});
 
 // ── MOBILE MENU ──
 const menuBtn = document.getElementById('menuBtn');
@@ -222,15 +243,37 @@ menuBtn.addEventListener('click', () => {
 function closeMobileMenu() {
   menuOpen = false;
   mobileMenu.classList.remove('open');
+  const spans = menuBtn.querySelectorAll('span');
+  gsap.to(spans[0], { rotation: 0, y: 0, duration: 0.25 });
+  gsap.to(spans[1], { opacity: 1, duration: 0.2 });
+  gsap.to(spans[2], { rotation: 0, y: 0, duration: 0.25 });
 }
+
+// Bind mobile nav close links
+document.querySelectorAll('.js-close-menu').forEach(el => {
+  el.addEventListener('click', closeMobileMenu);
+});
 
 // ── LOAD IMAGES FROM CONFIG ──
 fetch('assets/config.json')
   .then(response => response.json())
   .then(data => {
-    // Load loader logo
+    // Load loader logo — only if loader hasn't been dismissed yet
     if (data.loader && data.loader.logo) {
-      document.getElementById('loaderLogo').innerHTML = `<img class="loader-logo-img" src="${data.loader.logo}" alt="ONE ERA Logo">`;
+      const loaderLogoEl = document.getElementById('loaderLogo');
+      // Only update if loader is still visible (not hidden)
+      if (loaderLogoEl && loader.style.display !== 'none') {
+        const existingImg = loaderLogoEl.querySelector('img');
+        if (existingImg) {
+          existingImg.src = data.loader.logo;
+        } else {
+          const img = document.createElement('img');
+          img.className = 'loader-logo-img';
+          img.src = data.loader.logo;
+          img.alt = 'ONE ERA Logo';
+          loaderLogoEl.appendChild(img);
+        }
+      }
     }
 
     // Load hero background
@@ -262,13 +305,22 @@ fetch('assets/config.json')
       const lifestyleGrid = document.getElementById('lifestyle-grid');
       if (lifestyleGrid) {
         lifestyleGrid.innerHTML = '';
-        data.lifestyle.forEach((img, index) => {
+        data.lifestyle.forEach((imgData, index) => {
           const item = document.createElement('div');
           item.className = 'lifestyle-item' + (index % 5 === 0 || index % 5 === 4 ? ' wide' : '') + (index % 7 === 1 ? ' tall' : '');
-          item.innerHTML = `
-            <img src="${img.src}" alt="${img.alt}" loading="lazy" onerror="this.parentElement.style.display='none'">
-            <div class="lifestyle-caption">${img.caption || ''}</div>
-          `;
+
+          const imgEl = document.createElement('img');
+          imgEl.src     = imgData.src;
+          imgEl.alt     = imgData.alt || '';
+          imgEl.loading = 'lazy';
+          imgEl.addEventListener('error', () => { item.style.display = 'none'; });
+
+          const caption = document.createElement('div');
+          caption.className = 'lifestyle-caption';
+          caption.textContent = imgData.caption || '';
+
+          item.appendChild(imgEl);
+          item.appendChild(caption);
           lifestyleGrid.appendChild(item);
         });
       }

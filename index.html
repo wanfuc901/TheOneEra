@@ -89,11 +89,11 @@
 
 <!-- MOBILE MENU -->
 <div id="mobile-menu">
-  <a href="#brand-story" class="mobile-nav-link" onclick="closeMobileMenu()">Về Dự Án</a>
-  <a href="#amenities" class="mobile-nav-link" onclick="closeMobileMenu()">Tiện Ích</a>
-  <a href="#location" class="mobile-nav-link" onclick="closeMobileMenu()">Vị Trí</a>
-  <a href="#products" class="mobile-nav-link" onclick="closeMobileMenu()">Sản Phẩm</a>
-  <a href="#cta" class="mobile-nav-link" onclick="closeMobileMenu()">Bảng Giá</a>
+  <a href="#brand-story" class="mobile-nav-link js-close-menu">Về Dự Án</a>
+  <a href="#amenities" class="mobile-nav-link js-close-menu">Tiện Ích</a>
+  <a href="#location" class="mobile-nav-link js-close-menu">Vị Trí</a>
+  <a href="#products" class="mobile-nav-link js-close-menu">Sản Phẩm</a>
+  <a href="#cta" class="mobile-nav-link js-close-menu">Bảng Giá</a>
   <a href="tel:0865149461" class="mobile-nav-link gold-text">0865149461</a>
 </div>
 
@@ -124,7 +124,7 @@
           Nhận Bảng Giá
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <button class="btn-ghost" onclick="document.getElementById('popup-overlay').classList.add('show')">
+        <button class="btn-ghost js-open-popup">
           Xem Sa Bàn VR360
         </button>
       </div>
@@ -621,9 +621,9 @@
       <h2 class="section-title reveal-up">Dòng Sản Phẩm<br><em style="font-style:italic;color:var(--gold);">Tinh Tuyển</em></h2>
     </div>
     <div class="product-tabs">
-      <button class="tab-btn active" onclick="switchTab('canho',this)">Căn Hộ Cao Cấp</button>
-      <button class="tab-btn" onclick="switchTab('nhapho',this)">Nhà Phố Compound</button>
-      <button class="tab-btn" onclick="switchTab('bietthu',this)">Biệt Thự Ven Hồ</button>
+      <button class="tab-btn active" data-tab="canho">Căn Hộ Cao Cấp</button>
+      <button class="tab-btn" data-tab="nhapho">Nhà Phố Compound</button>
+      <button class="tab-btn" data-tab="bietthu">Biệt Thự Ven Hồ</button>
     </div>
     <div id="tab-canho" class="tab-pane active">
       <div class="product-info">
@@ -757,7 +757,6 @@
     <div class="footer-bottom">
       <p>© 2026 ONE ERA by KINERA. Đã đăng ký bản quyền. Thông tin mang tính tham khảo.</p>
       <div class="footer-bottom-links">
-        <a href="admin.php">Admin</a>
         <a href="#">Chính Sách Bảo Mật</a>
         <a href="#">Điều Khoản Sử Dụng</a>
       </div>
@@ -771,17 +770,17 @@
     <span class="float-label">0865149461</span>
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.48-1.48a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
   </a>
-  <button class="float-btn float-btn-msg" onclick="document.getElementById('popup-overlay').classList.add('show')">
+  <button class="float-btn float-btn-msg js-open-popup">
     <span class="float-label">Nhận Bảng Giá</span>
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
   </button>
 </div>
 
 <!-- POPUP -->
-<div id="popup-overlay" onclick="handlePopupClick(event)">
+<div id="popup-overlay">
   <div class="popup">
     <!-- Nút X đóng popup -->
-    <button class="popup-close" onclick="closePopup()" aria-label="Đóng">
+    <button class="popup-close js-close-popup" aria-label="Đóng">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
     <div class="popup-header">
@@ -793,7 +792,7 @@
       <div class="popup-form">
         <input type="text" class="popup-input" placeholder="Họ tên của bạn *" autocomplete="name">
         <input type="tel" class="popup-input" placeholder="Số điện thoại Zalo *" autocomplete="tel">
-        <button class="btn-primary" style="width:100%;justify-content:center;padding:16px;" onclick="closePopup()">
+        <button class="btn-primary" style="width:100%;justify-content:center;padding:16px;">
           Nhận Tài Liệu Qua Zalo
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>

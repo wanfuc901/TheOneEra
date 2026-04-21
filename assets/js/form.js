@@ -220,21 +220,27 @@
       if (data.ok) {
         // Hiện success state trong form wrapper
         const isDark = wrapEl.closest("#cta") === null; // popup = dark
-        wrapEl.innerHTML = `
-          <div class="oe-form-success ${!isDark ? 'light' : ''}">
-            <div class="oe-success-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-            </div>
-            <div class="oe-success-title">Đăng ký thành công!</div>
-            <div class="oe-success-desc">
-              Cảm ơn <strong>${nameInput.value.trim()}</strong>.<br>
-              Chuyên viên sẽ liên hệ <strong>${phoneInput.value}</strong><br>
-              trong vòng 30 phút làm việc.
-            </div>
+        const safeName  = document.createTextNode(nameInput.value.trim());
+        const safePhone = document.createTextNode(phoneInput.value);
+        const successDiv = document.createElement("div");
+        successDiv.className = `oe-form-success ${!isDark ? 'light' : ''}`;
+        successDiv.innerHTML = `
+          <div class="oe-success-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <div class="oe-success-title">Đăng ký thành công!</div>
+          <div class="oe-success-desc">
+            Cảm ơn <strong class="js-name"></strong>.<br>
+            Chuyên viên sẽ liên hệ <strong class="js-phone"></strong><br>
+            trong vòng 30 phút làm việc.
           </div>
         `;
+        successDiv.querySelector(".js-name").appendChild(safeName);
+        successDiv.querySelector(".js-phone").appendChild(safePhone);
+        wrapEl.innerHTML = "";
+        wrapEl.appendChild(successDiv);
         showToast("✓ " + (data.message || "Đăng ký thành công!"), "success");
       } else {
         showToast(data.error || "Có lỗi xảy ra, vui lòng thử lại.", "error");
@@ -242,7 +248,7 @@
 
     } catch (err) {
       setLoading(btn, false);
-      showToast("Mất kết nối, vui lòng thử lại hoặc gọi 0559239553", "error");
+      showToast("Mất kết nối, vui lòng thử lại hoặc gọi 0865149461", "error");
     }
   }
 
