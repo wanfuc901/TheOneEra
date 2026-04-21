@@ -1190,7 +1190,7 @@
       <!-- ÁNH MASTERPLAN CHÍNH — IMG_4979: aerial balloon-label overview -->
       <img src="<!-- MASTERPLAN_IMG: /mnt/user-data/uploads/1776316437581_IMG_4979.JPG -->"
         onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80'"
-        alt="Quy hoạch tổng thể ONE ERA" style="width:100%;display:block;">
+        alt="Quy hoạch tổng thể ONE ERA" id="masterplanImg" style="width:100%;display:block;">
     </div>
     <p class="masterplan-note reveal-up">* Hình ảnh phối cảnh minh họa — Quy hoạch chính thức theo văn bản pháp lý được phê duyệt</p>
   </div>
@@ -1219,70 +1219,8 @@
       </div>
       <h2 class="section-title">Hệ Sinh Thái Sống<br><em style="font-style:italic;color:var(--gold);">Hoàn Hảo</em></h2>
     </div>
-    <div class="lifestyle-grid">
-      <!-- WIDE — IMG_4990: aerial ONE ERA towers night -->
-      <div class="lifestyle-item wide">
-        <img src="<!-- GALLERY_IMG_1: /mnt/user-data/uploads/1776316437584_IMG_4990.JPG -->"
-          onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80'"
-          alt="ONE ERA Aerial View">
-        <div class="lifestyle-caption">Toàn Cảnh Đại Đô Thị</div>
-      </div>
-      <!-- TALL — IMG_4985: club house / pool -->
-      <div class="lifestyle-item tall">
-        <img src="<!-- GALLERY_IMG_2: /mnt/user-data/uploads/1776316437583_IMG_4985.JPG -->"
-          onerror="this.src='https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80'"
-          alt="Club House &amp; Hồ Bơi">
-        <div class="lifestyle-caption">Club House &amp; Hồ Bơi</div>
-      </div>
-      <!-- IMG_4983: park green -->
-      <div class="lifestyle-item">
-        <img src="<!-- GALLERY_IMG_3: /mnt/user-data/uploads/1776316437581_IMG_4983.JPG -->"
-          onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80'"
-          alt="Công viên xanh">
-        <div class="lifestyle-caption">Công Viên Ven Suối 40Ha</div>
-      </div>
-      <!-- IMG_4984: shophouse -->
-      <div class="lifestyle-item">
-        <img src="<!-- GALLERY_IMG_4: /mnt/user-data/uploads/1776316437582_IMG_4984.JPG -->"
-          onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80'"
-          alt="Shophouse">
-        <div class="lifestyle-caption">Nhà Phố Thương Mại</div>
-      </div>
-      <!-- IMG_4986: AEON Mall -->
-      <div class="lifestyle-item">
-        <img src="<!-- GALLERY_IMG_5: /mnt/user-data/uploads/1776316437583_IMG_4986.JPG -->"
-          onerror="this.src='https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80'"
-          alt="AEON Mall">
-        <div class="lifestyle-caption">AEON Mall Nội Khu</div>
-      </div>
-      <!-- WIDE — IMG_4988: sa bàn model -->
-      <div class="lifestyle-item wide">
-        <img src="<!-- GALLERY_IMG_6: /mnt/user-data/uploads/1776316437584_IMG_4988.PNG -->"
-          onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80'"
-          alt="Sa bàn ONE ERA">
-        <div class="lifestyle-caption">Sa Bàn Tổng Thể</div>
-      </div>
-      <!-- IMG_4987: park aerial -->
-      <div class="lifestyle-item">
-        <img src="<!-- GALLERY_IMG_7: /mnt/user-data/uploads/1776316437583_IMG_4987.JPG -->"
-          onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80'"
-          alt="Tiện ích xanh">
-        <div class="lifestyle-caption">Không Gian Xanh Tiện Ích</div>
-      </div>
-      <!-- IMG_4992: villa pool -->
-      <div class="lifestyle-item">
-        <img src="<!-- GALLERY_IMG_8: /mnt/user-data/uploads/1776316437585_IMG_4992.JPG -->"
-          onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80'"
-          alt="Biệt thự hồ bơi">
-        <div class="lifestyle-caption">Biệt Thự Đặc Quyền</div>
-      </div>
-      <!-- IMG_4981: aerial streetview -->
-      <div class="lifestyle-item">
-        <img src="<!-- GALLERY_IMG_9: /mnt/user-data/uploads/1776316437581_IMG_4981.JPG -->"
-          onerror="this.src='https://images.unsplash.com/photo-1600607687959-ce8a6c25118c?auto=format&fit=crop&w=600&q=80'"
-          alt="Đường nội khu">
-        <div class="lifestyle-caption">Hạ Tầng &amp; Kết Nối</div>
-      </div>
+    <div class="lifestyle-grid" id="lifestyle-grid">
+      <!-- Images will be loaded dynamically -->
     </div>
   </div>
 </section>
@@ -1644,6 +1582,7 @@
     <div class="footer-bottom">
       <p>© 2026 ONE ERA by KINERA. Đã đăng ký bản quyền. Thông tin mang tính tham khảo.</p>
       <div class="footer-bottom-links">
+        <a href="admin.php">Admin</a>
         <a href="#">Chính Sách Bảo Mật</a>
         <a href="#">Điều Khoản Sử Dụng</a>
       </div>
@@ -1854,6 +1793,57 @@ menuBtn.addEventListener('click', () => {
   }
 });
 function closeMobileMenu() { menuOpen = false; mobileMenu.classList.remove('open'); }
+
+// Load all images from config
+fetch('assets/config.json')
+  .then(response => response.json())
+  .then(data => {
+    // Load loader logo
+    if (data.loader && data.loader.logo) {
+      document.getElementById('loaderLogo').innerHTML = `<img class="loader-logo-img" src="${data.loader.logo}" alt="ONE ERA Logo">`;
+    }
+
+    // Load hero bg
+    if (data.hero && data.hero.bg) {
+      document.getElementById('heroImg').src = data.hero.bg;
+    }
+
+    // Load brand images
+    if (data.brand && data.brand.length > 0) {
+      const brandGrid = document.querySelector('.brand-img-grid');
+      brandGrid.innerHTML = '';
+      data.brand.forEach((img, index) => {
+        const wrap = document.createElement('div');
+        wrap.className = index === 0 ? 'brand-img-wrap img-tall' : 'brand-img-wrap img-short';
+        wrap.innerHTML = `<img src="${img.src}" alt="${img.alt}" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80'">`;
+        brandGrid.appendChild(wrap);
+      });
+    }
+
+    // Load masterplan
+    if (data.masterplan && data.masterplan.img) {
+      document.getElementById('masterplanImg').src = data.masterplan.img;
+    }
+
+    // Load lifestyle gallery
+    if (data.lifestyle && data.lifestyle.length > 0) {
+      const lifestyleGrid = document.getElementById('lifestyle-grid');
+      lifestyleGrid.innerHTML = '';
+      data.lifestyle.forEach((img, index) => {
+        const item = document.createElement('div');
+        item.className = 'lifestyle-item' + (index % 5 === 0 || index % 5 === 4 ? ' wide' : '') + (index % 7 === 1 ? ' tall' : '');
+        item.innerHTML = `
+          <img src="${img.src}" alt="${img.alt}" onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80'">
+          <div class="lifestyle-caption">${img.caption || 'Ảnh ' + (index + 1)}</div>
+        `;
+        lifestyleGrid.appendChild(item);
+      });
+    }
+
+    // Load construction (if any)
+    // Add similar code for construction section when implemented
+  })
+  .catch(err => console.log('Config not found, using defaults'));
 </script>
 </body>
 </html>
