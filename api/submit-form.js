@@ -64,7 +64,7 @@ export default async function handler(req, res) {
             "Authorization": `Bearer ${RESEND_KEY}`,
           },
           body: JSON.stringify({
-            from:    "ONE ERA <onboarding@resend.dev>",
+            from: "ONE ERA <noreply@hoangphuc.space>",
             to:      RECEIVERS,
             subject: `[ONE ERA] Lead mới — ${leadData.name} — ${leadData.phone}`,
             html:    buildEmailHtml(leadData),
