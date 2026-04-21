@@ -1,0 +1,211 @@
+{
+    "loader": {
+        "logo": "assets/images/loader_logo.jpeg"
+    },
+    "hero": {
+        "bg": ""
+    },
+    "brand": [],
+    "masterplan": {
+        "img": ""
+    },
+    "lifestyle": [
+        {
+            "src": "assets/images/69e716b2a70ff.jpeg",
+            "alt": "Lifestyle Image 1",
+            "caption": ""
+        },
+        {
+            "src": "assets/images/69e716b2a741a.jpeg",
+            "alt": "Lifestyle Image 2",
+            "caption": ""
+        },
+        {
+            "src": "assets/images/69e716b2a7658.jpeg",
+            "alt": "Lifestyle Image 3",
+            "caption": ""
+        },
+        {
+            "src": "assets/images/69e716b2a7878.jpeg",
+            "alt": "Lifestyle Image 4",
+            "caption": ""
+        },
+        {
+            "src": "assets/images/69e716b2a7a89.jpeg",
+            "alt": "Lifestyle Image 5",
+            "caption": ""
+        }
+    ],
+    "construction": [],
+    "images": {
+        "loader-logo": {
+            "src": "assets/images/69e716b2a3cf3.jpeg",
+            "type": "file",
+            "section": "Loader Logo",
+            "position": "loader-logo",
+            "alt": "ONE ERA Logo",
+            "status": "active"
+        },
+        "auto_1": {
+            "src": "assets/images/69e716b2a3e48.jpeg",
+            "type": "file",
+            "section": "Construction Progress",
+            "position": "auto_1",
+            "alt": "Ti\u1ebfn \u0111\u1ed9 x\u00e2y d\u1ef1ng",
+            "status": "active"
+        },
+        "auto_2": {
+            "src": "assets/images/69e716b2a3f8b.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_2",
+            "alt": "H\u1ea1 t\u1ea7ng n\u1ed9i khu",
+            "status": "active"
+        },
+        "auto_3": {
+            "src": "assets/images/69e716b2a4342.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_3",
+            "alt": "K\u1ebft c\u1ea5u \u0111ang thi c\u00f4ng",
+            "status": "active"
+        },
+        "auto_4": {
+            "src": "assets/images/69e716b2a446f.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_4",
+            "alt": "T\u1ed5ng th\u1ec3 m\u1eb7t b\u1eb1ng",
+            "status": "active"
+        },
+        "auto_5": {
+            "src": "assets/images/69e716b2a45a8.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_5",
+            "alt": "C\u00f4ng tr\u00ecnh n\u1ed5i b\u1eadt",
+            "status": "active"
+        },
+        "auto_7": {
+            "src": "assets/images/69e716b2a4910.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_7",
+            "alt": "L\u1ec5 c\u1eaft b\u0103ng khai tr\u01b0\u01a1ng",
+            "status": "active"
+        },
+        "auto_8": {
+            "src": "assets/images/69e716b2a46d3.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_8",
+            "alt": "Tr\u00ecnh b\u00e0y d\u1ef1 \u00e1n",
+            "status": "active"
+        },
+        "auto_9": {
+            "src": "assets/images/69e716b2a4a8e.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_9",
+            "alt": "Kh\u00e1ch tham quan sa b\u00e0n",
+            "status": "active"
+        },
+        "auto_10": {
+            "src": "assets/images/69e716b2a4c11.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_10",
+            "alt": "To\u00e0n c\u1ea3nh v\u0103n ph\u00f2ng",
+            "status": "active"
+        },
+        "auto_11": {
+            "src": "assets/images/69e716b2a4d47.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_11",
+            "alt": "S\u1ed1ng Tr\u00e2n Qu\u00fd",
+            "status": "active"
+        },
+        "auto_13": {
+            "src": "assets/images/69e716b2a4fd0.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_13",
+            "alt": "ONE ERA aerial day",
+            "status": "active"
+        },
+        "auto_14": {
+            "src": "assets/images/69e716b2a51c9.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_14",
+            "alt": "City render",
+            "status": "active"
+        },
+        "auto_15": {
+            "src": "assets/images/69e716b2a61b2.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_15",
+            "alt": "Street render",
+            "status": "active"
+        },
+        "auto_16": {
+            "src": "assets/images/69e716b2a6603.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_16",
+            "alt": "Lifestyle reading",
+            "status": "active"
+        },
+        "auto_17": {
+            "src": "assets/images/69e716b2a6952.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_17",
+            "alt": "Lifestyle relax",
+            "status": "active"
+        },
+        "auto_18": {
+            "src": "assets/images/69e716b2a6bc3.jpeg",
+            "type": "file",
+            "section": "Other",
+            "position": "auto_18",
+            "alt": "Lifestyle kid",
+            "status": "active"
+        },
+        "auto_12": {
+            "src": "assets/images/69e716b2a6db5.jpeg",
+            "type": "file",
+            "section": "Renders",
+            "position": "auto_12",
+            "alt": "ONE ERA aerial night",
+            "status": "active"
+        },
+        "product-canho": {
+            "src": "https://images.unsplash.com/photo-1600607687959-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80",
+            "type": "url",
+            "section": "Products",
+            "position": "product-canho",
+            "alt": "C\u0103n h\u1ed9",
+            "status": "active"
+        },
+        "product-nhapho": {
+            "src": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80",
+            "type": "url",
+            "section": "C\u0103n H\u1ed9",
+            "position": "product-nhapho",
+            "alt": "Nh\u00e0 ph\u1ed1",
+            "status": "active"
+        },
+        "product-bietthu": {
+            "src": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80",
+            "type": "url",
+            "section": "Nh\u00e0 Ph\u1ed1",
+            "position": "product-bietthu",
+            "alt": "Bi\u1ec7t th\u1ef1",
+            "status": "active"
+        }
+    },
+    "layout": []
+}

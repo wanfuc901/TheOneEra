@@ -1,0 +1,537 @@
+/* ============================================
+   ONE ERA - Responsive Styles
+   ============================================ */
+
+/* Tablet (max 1024px) */
+@media (max-width: 1024px) {
+  .hero-content { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .hero-panel { 
+    display: none; 
+  }
+  
+  .location-grid, 
+  .tab-pane.active { 
+    grid-template-columns: 1fr; 
+    gap: 48px; 
+  }
+  
+  .dev-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  .footer-grid { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+  }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+  html { 
+    font-size: 15px; 
+  }
+  
+  .container { 
+    padding-left: 20px; 
+    padding-right: 20px; 
+  }
+  
+  .cursor, 
+  .cursor-ring { 
+    display: none; 
+  }
+  
+  body { 
+    cursor: auto; 
+  }
+
+  /* Topbar */
+  #topbar { 
+    padding: 8px 20px; 
+  }
+  
+  #topbar .topbar-item:not(.topbar-phone) { 
+    display: none; 
+  }
+
+  /* Header */
+  #header { 
+    padding: 0 20px; 
+    height: 62px; 
+  }
+  
+  .header-logo { 
+    font-size: 19px; 
+    letter-spacing: 0.22em; 
+    gap: 10px; 
+  }
+  
+  .logo-tag { 
+    font-size: 8px; 
+    letter-spacing: 0.25em; 
+  }
+  
+  nav { 
+    display: none; 
+  }
+  
+  .mobile-menu-btn { 
+    display: block; 
+    cursor: pointer; 
+  }
+
+  /* Hero */
+  #hero { 
+    min-height: 100svh; 
+  }
+  
+  .hero-content { 
+    padding: 0 20px 100px; 
+    grid-template-columns: 1fr; 
+    gap: 0; 
+  }
+  
+  .hero-badge { 
+    margin-bottom: 20px; 
+  }
+  
+  .hero-badge-text { 
+    font-size: 9px; 
+    letter-spacing: 0.28em; 
+  }
+  
+  .hero-title { 
+    font-size: clamp(36px, 9.5vw, 52px); 
+    margin-bottom: 20px; 
+    line-height: 1.05; 
+  }
+  
+  .hero-desc { 
+    font-size: 13px; 
+    line-height: 1.75; 
+    margin-bottom: 32px; 
+  }
+  
+  .hero-actions { 
+    flex-direction: column; 
+    gap: 10px; 
+    align-items: stretch; 
+  }
+  
+  .btn-primary, 
+  .btn-ghost { 
+    justify-content: center; 
+    padding: 15px 24px; 
+    font-size: 10px; 
+  }
+  
+  .hero-panel { 
+    display: none; 
+  }
+  
+  .scroll-ind { 
+    bottom: 24px; 
+  }
+
+  /* Sections */
+  #location, 
+  #developers, 
+  #products, 
+  #cta { 
+    padding: 72px 0; 
+  }
+  
+  .section-title { 
+    font-size: clamp(30px, 7.5vw, 44px); 
+  }
+
+  /* Brand Story */
+  .brand-grid { 
+    grid-template-columns: 1fr; 
+    gap: 48px; 
+  }
+  
+  .brand-img-grid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .brand-img-grid .img-tall { 
+    height: 300px; 
+  }
+  
+  .brand-img-grid .img-short { 
+    height: 200px; 
+  }
+
+  /* Lifestyle */
+  .lifestyle-grid { 
+    grid-template-columns: 1fr 1fr; 
+  }
+  
+  .lifestyle-item.wide { 
+    grid-column: span 2; 
+  }
+
+  /* Video */
+  .video-overlay-text { 
+    padding: 24px 24px; 
+  }
+
+  /* Location */
+  .location-grid { 
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+  }
+  
+  .location-text p { 
+    font-size: 13px; 
+  }
+  
+  .lp-time { 
+    font-size: 24px; 
+  }
+  
+  .location-img-wrap img { 
+    height: 260px; 
+  }
+  
+  .location-badge {
+    left: 0; 
+    bottom: 0; 
+    position: relative; 
+    display: inline-flex;
+    gap: 16px; 
+    align-items: center; 
+    margin-top: -1px; 
+    padding: 16px 20px;
+  }
+  
+  .lb-num { 
+    font-size: 28px; 
+  }
+
+  /* Developers */
+  .dev-grid { 
+    grid-template-columns: 1fr 1fr; 
+  }
+  
+  .dev-card { 
+    padding: 28px 20px; 
+  }
+  
+  .dev-num { 
+    font-size: 44px; 
+    margin-bottom: 16px; 
+  }
+  
+  .dev-icon-wrap { 
+    width: 42px; 
+    height: 42px; 
+    margin-bottom: 16px; 
+  }
+  
+  .dev-name { 
+    font-size: 15px; 
+  }
+  
+  .dev-role { 
+    font-size: 10px; 
+  }
+  
+  .dev-header { 
+    margin-bottom: 40px; 
+  }
+
+  /* Products */
+  .product-tabs { 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    flex-wrap: nowrap; 
+    white-space: nowrap; 
+    scrollbar-width: none; 
+  }
+  
+  .product-tabs::-webkit-scrollbar { 
+    display: none; 
+  }
+  
+  .tab-btn { 
+    padding: 14px 20px 13px; 
+    font-size: 10px; 
+    flex-shrink: 0; 
+  }
+  
+  .tab-pane.active { 
+    grid-template-columns: 1fr; 
+    gap: 28px; 
+  }
+  
+  .product-img-wrap img { 
+    height: 260px; 
+  }
+  
+  .product-title { 
+    font-size: 28px; 
+  }
+  
+  .product-desc { 
+    font-size: 12px; 
+  }
+  
+  .price-table td { 
+    font-size: 12px; 
+    padding: 11px 0; 
+  }
+
+  /* CTA */
+  .cta-title { 
+    font-size: clamp(32px, 8vw, 48px); 
+  }
+  
+  .cta-desc { 
+    font-size: 12px; 
+  }
+  
+  .form-row { 
+    grid-template-columns: 1fr; 
+    gap: 10px; 
+  }
+  
+  .form-input { 
+    font-size: 14px; 
+    padding: 15px 16px; 
+  }
+  
+  .benefits-row { 
+    grid-template-columns: 1fr 1fr 1fr; 
+  }
+  
+  .benefit-item { 
+    padding: 24px 12px; 
+  }
+  
+  .benefit-num { 
+    font-size: 28px; 
+  }
+  
+  .benefit-text { 
+    font-size: 9px; 
+    letter-spacing: 0.1em; 
+  }
+
+  /* Footer */
+  .footer-grid { 
+    grid-template-columns: 1fr; 
+    gap: 32px; 
+  }
+  
+  .footer-bottom { 
+    flex-direction: column; 
+    gap: 10px; 
+    text-align: center; 
+  }
+  
+  .footer-bottom-links { 
+    justify-content: center; 
+  }
+
+  /* Floating CTA */
+  .float-cta { 
+    right: 0; 
+    bottom: 0; 
+    flex-direction: row; 
+    width: 100%; 
+    gap: 0; 
+    border-top: 1px solid rgba(201,160,220,0.15); 
+  }
+  
+  .float-btn { 
+    flex: 1; 
+    width: auto; 
+    height: 56px; 
+    border-radius: 0; 
+    font-family: var(--ff-body); 
+    font-size: 11px; 
+    font-weight: 400; 
+    letter-spacing: 0.15em; 
+    text-transform: uppercase; 
+    gap: 8px; 
+  }
+  
+  .float-btn-phone { 
+    flex: 1.1; 
+  }
+  
+  .float-label { 
+    position: static; 
+    opacity: 1 !important; 
+    background: none; 
+    color: inherit; 
+    font-size: 10px; 
+    padding: 0; 
+    letter-spacing: 0.12em; 
+  }
+
+  /* Popup Mobile */
+  #popup-overlay {
+    padding: 0;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .popup {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    max-height: 92svh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateY(100%);
+  }
+  
+  #popup-overlay.show .popup {
+    transform: translateY(0);
+  }
+  
+  /* Handle bar */
+  .popup::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: rgba(0,0,0,0.12);
+    border-radius: 2px;
+    margin: 10px auto 0;
+  }
+  
+  .popup-header {
+    padding: 20px 24px 24px;
+    border-radius: 0;
+  }
+  
+  .popup-title { 
+    font-size: 26px; 
+    letter-spacing: 0.07em; 
+  }
+  
+  .popup-sub { 
+    font-size: 9px; 
+  }
+  
+  .popup-body { 
+    padding: 20px 20px 24px; 
+  }
+  
+  .popup-desc { 
+    font-size: 12px; 
+    margin-bottom: 18px; 
+  }
+  
+  .popup-input { 
+    font-size: 16px; 
+    padding: 15px 16px; 
+  } /* 16px prevents iOS zoom */
+
+  /* Close button mobile */
+  .popup-close {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+  }
+
+  /* Loader */
+  .loader-letter { 
+    font-size: clamp(40px, 10vw, 64px); 
+  }
+  
+  .loader-sub { 
+    font-size: 9.5px; 
+    letter-spacing: 0.35em; 
+  }
+
+  /* Mobile menu */
+  #mobile-menu { 
+    padding: 90px 24px 40px; 
+  }
+  
+  .mobile-nav-link { 
+    font-size: 28px; 
+    padding: 13px 0; 
+  }
+}
+
+/* Small Phones (max 390px) */
+@media (max-width: 390px) {
+  .hero-title { 
+    font-size: 34px; 
+  }
+  
+  .section-title { 
+    font-size: 28px; 
+  }
+  
+  .dev-grid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .dev-card { 
+    padding: 24px 18px; 
+  }
+  
+  .benefits-row { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .benefit-item { 
+    padding: 20px 16px; 
+  }
+  
+  .benefit-num { 
+    font-size: 36px; 
+  }
+  
+  .float-btn { 
+    font-size: 9.5px; 
+  }
+  
+  .popup-title { 
+    font-size: 22px; 
+  }
+  
+  .popup-body { 
+    padding: 18px 16px 20px; 
+  }
+}
+
+/* Very Small (max 320px) */
+@media (max-width: 320px) {
+  .hero-title { 
+    font-size: 30px; 
+  }
+  
+  .hero-badge-text { 
+    font-size: 8px; 
+  }
+  
+  .tab-btn { 
+    padding: 12px 14px; 
+    font-size: 9px; 
+  }
+}
+
+/* Tall Phones - safe area */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  @media (max-width: 768px) {
+    .float-cta { 
+      padding-bottom: env(safe-area-inset-bottom); 
+    }
+    
+    .popup { 
+      padding-bottom: env(safe-area-inset-bottom); 
+    }
+  }
+}

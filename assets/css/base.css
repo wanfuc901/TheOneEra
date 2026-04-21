@@ -1,0 +1,95 @@
+/* ============================================
+   ONE ERA - Base Styles
+   ============================================ */
+
+/* Reset */
+*, *::before, *::after { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+  font-size: 16px; 
+}
+
+body {
+  font-family: var(--ff-body);
+  background: var(--cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (max-width: 768px) {
+  body { 
+    cursor: auto; 
+    padding-bottom: 56px; 
+  }
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    body { 
+      padding-bottom: calc(56px + env(safe-area-inset-bottom)); 
+    }
+  }
+}
+
+/* Section Base */
+section { 
+  position: relative; 
+}
+
+.container { 
+  max-width: var(--container-max); 
+  margin: 0 auto; 
+  padding: 0 var(--container-padding); 
+}
+
+/* Typography */
+.section-label { 
+  display: flex; 
+  align-items: center; 
+  gap: 14px; 
+  margin-bottom: 20px; 
+}
+
+.section-label-line { 
+  width: 32px; 
+  height: 1px; 
+  background: var(--gold); 
+}
+
+.section-label-text {
+  font-family: var(--ff-body); 
+  font-size: 10px; 
+  font-weight: 400;
+  letter-spacing: 0.4em; 
+  color: var(--gold); 
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: var(--ff-display); 
+  font-size: clamp(36px, 4vw, 64px);
+  font-weight: 300; 
+  line-height: 1.1; 
+  color: var(--navy);
+}
+
+.section-title.light { 
+  color: var(--white); 
+}
+
+/* Reveal Animation Base */
+.reveal-up { 
+  opacity: 0; 
+  transform: translateY(40px); 
+}
+
+/* Divider */
+.gold-divider { 
+  width: 48px; 
+  height: 1px; 
+  background: var(--gold); 
+  margin: 28px 0; 
+}

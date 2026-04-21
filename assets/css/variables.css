@@ -1,0 +1,44 @@
+/* ============================================
+   ONE ERA - CSS Variables (Design Tokens)
+   ============================================ */
+
+:root {
+  /* Aurora Palette */
+  --navy:        #1a1535;           /* deep indigo-night */
+  --navy-mid:    #241d4a;           /* mid violet-dusk */
+  --navy-light:  #302660;           /* soft violet */
+  --gold:        #c9a0dc;           /* lavender-mauve accent */
+  --gold-light:  #dbbdee;           /* light lavender */
+  --gold-pale:   #f3ecfb;           /* whisper lavender */
+  --blush:       #e8b4a0;           /* peach-blush */
+  --sky:         #a8c4e0;           /* soft sky-blue */
+  --white:       #ffffff;
+  --cream:       #f9f6fd;           /* lavender-tinted off-white */
+  --cream-dark:  #ede7f6;
+  --text-dark:   #1a1535;
+  --text-muted:  #7e6e96;           /* muted violet-grey */
+  --border: rgba(201,160,220,0.25);
+
+  /* Typography */
+  --ff-display: 'Playfair Display', Georgia, serif;
+  --ff-body: 'Be Vietnam Pro', sans-serif;
+
+  /* Spacing */
+  --section-padding: 120px;
+  --container-max: 1280px;
+  --container-padding: 48px;
+  --gap-lg: 80px;
+  --gap-md: 48px;
+  --gap-sm: 24px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+  --shadow-lg: 0 24px 60px rgba(26,21,53,0.15);
+  --shadow-xl: 0 32px 80px rgba(0,0,0,0.5);
+}

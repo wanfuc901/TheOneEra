@@ -1,0 +1,188 @@
+/* ============================================
+   ONE ERA - Reusable Components
+   ============================================ */
+
+/* Custom Cursor */
+.cursor {
+  position: fixed; 
+  width: 8px; 
+  height: 8px;
+  background: var(--gold); 
+  border-radius: 50%;
+  pointer-events: none; 
+  z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: width .2s, height .2s, background .2s;
+}
+
+.cursor-ring {
+  position: fixed; 
+  width: 36px; 
+  height: 36px;
+  border: 1px solid var(--gold); 
+  border-radius: 50%;
+  pointer-events: none; 
+  z-index: 9998;
+  transform: translate(-50%,-50%);
+  transition: all .12s ease; 
+  opacity: .6;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 12px; 
+  padding: 16px 36px;
+  background: var(--gold); 
+  color: var(--navy);
+  font-family: var(--ff-body); 
+  font-size: 10px; 
+  font-weight: 500;
+  letter-spacing: 0.3em; 
+  text-transform: uppercase; 
+  text-decoration: none;
+  border: none; 
+  cursor: pointer;
+  transition: background .25s, transform .2s, box-shadow .25s;
+}
+
+.btn-primary:hover { 
+  background: var(--gold-light); 
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 28px rgba(201,160,220,0.4); 
+}
+
+.btn-primary svg { 
+  flex-shrink: 0; 
+}
+
+.btn-ghost {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 10px; 
+  padding: 16px 32px;
+  border: 1px solid rgba(201,160,220,0.4); 
+  color: rgba(255,255,255,0.8);
+  font-family: var(--ff-body); 
+  font-size: 10px; 
+  font-weight: 400;
+  letter-spacing: 0.3em; 
+  text-transform: uppercase;
+  text-decoration: none; 
+  cursor: pointer; 
+  background: none;
+  transition: border-color .25s, color .25s;
+}
+
+.btn-ghost:hover { 
+  border-color: var(--gold); 
+  color: var(--gold); 
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%; 
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(201,160,220,0.2);
+  padding: 16px 20px; 
+  font-family: var(--ff-body); 
+  font-size: 13px; 
+  font-weight: 300;
+  color: var(--white); 
+  outline: none; 
+  transition: border-color .25s; 
+  appearance: none;
+}
+
+.form-input::placeholder { 
+  color: rgba(255,255,255,0.3); 
+  letter-spacing: 0.05em; 
+}
+
+.form-input:focus { 
+  border-color: var(--gold); 
+}
+
+/* Tab Buttons */
+.tab-btn {
+  font-family: var(--ff-body); 
+  font-size: 11px; 
+  font-weight: 400;
+  letter-spacing: 0.25em; 
+  text-transform: uppercase; 
+  color: var(--text-muted);
+  background: none; 
+  border: none; 
+  padding: 16px 32px 15px; 
+  cursor: pointer;
+  position: relative; 
+  transition: color .25s;
+}
+
+.tab-btn::after {
+  content: ''; 
+  position: absolute; 
+  bottom: -1px; 
+  left: 0;
+  width: 100%; 
+  height: 1px; 
+  background: var(--gold); 
+  transform: scaleX(0); 
+  transition: transform .3s;
+}
+
+.tab-btn.active { 
+  color: var(--navy); 
+}
+
+.tab-btn.active::after { 
+  transform: scaleX(1); 
+}
+
+.tab-btn:hover { 
+  color: var(--navy); 
+}
+
+.tab-pane { 
+  display: none; 
+}
+
+.tab-pane.active { 
+  display: block; 
+  max-width: 720px;
+}
+
+/* Price Table */
+.price-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-bottom: 36px; 
+}
+
+.price-table tr { 
+  border-bottom: 1px solid var(--cream-dark); 
+}
+
+.price-table td { 
+  padding: 13px 0; 
+  font-family: var(--ff-body); 
+  font-size: 13px; 
+}
+
+.price-table td:first-child { 
+  color: var(--text-muted); 
+  font-weight: 300; 
+}
+
+.price-table td:last-child { 
+  text-align: right; 
+  color: var(--navy); 
+  font-weight: 400; 
+}
+
+.price-highlight { 
+  color: var(--navy-light) !important; 
+  font-size: 15px !important; 
+  font-weight: 500 !important; 
+}
